@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace CardGame.Domain.Data
+namespace CardGame.Models
 {
-    public class CardNameEntity
+    public class CardViewModel
     {
         public int Id { get; set; }
-
-        public string CardName { get; set; }
 
         public string CardImage { get; set; }
     }

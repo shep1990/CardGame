@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CardGame.Models;
 using CardGame.Domain.Services;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CardGame.Controllers
 {
@@ -21,8 +22,18 @@ namespace CardGame.Controllers
         public async Task<IActionResult> Index()
         {
             var cards = await _cardService.GetCardSelection();
+            var cardViewModel = new List<CardViewModel>();
 
-            return View();
+            foreach(var card in cards)
+            {
+                cardViewModel.Add(new CardViewModel
+                {
+                    Id = card.Id,
+                    CardImage = card.CardImage
+                });
+            }
+
+            return View(cardViewModel);
         }
     }
 }

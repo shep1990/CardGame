@@ -1,4 +1,5 @@
-﻿using CardGame.Domain.Repositories;
+﻿using CardGame.Domain.Data;
+using CardGame.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,7 +16,7 @@ namespace CardGame.Domain.Services
             _cardRepository = cardRepository;
         }
 
-        public async Task<List<string>> GetCardSelection()
+        public async Task<List<CardNameEntity>> GetCardSelection()
         {
             return await _cardRepository.GetAsync();
         }

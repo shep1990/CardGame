@@ -17,9 +17,9 @@ namespace CardGame.Domain.Repositories
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<List<string>> GetAsync()
+        public async Task<List<CardNameEntity>> GetAsync()
         {
-            var cards = await _unitOfWork.Context.Set<CardNameEntity>().Select(x => x.CardName).ToListAsync();
+            var cards = await _unitOfWork.Context.Set<CardNameEntity>().ToListAsync();
 
             var cardSelection = cards.OrderBy(x => Guid.NewGuid()).Take(5).ToList();
 
