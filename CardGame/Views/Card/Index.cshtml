@@ -1,11 +1,27 @@
-﻿@model List<CardViewModel>
+﻿
+<button class="drawCards">Draw Cards</button>
 
 <h2>Selected Cards</h2>
-<div class="row">
-    @foreach(var card in Model)
-    {
-        <div class="col-3 card-container">
-            <img src="~/Images/@card.CardImage" />
-        </div>
-    }
-</div>
+<div class="row selectedCards"></div>
+
+@section Scripts {
+    <script>
+    $('.drawCards').on('click', function () {
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("GetCards", "Card")',
+            dataType: 'json',
+            success: function (response) {
+                for (var prop in response) {
+                    var item = response[prop];
+                    $('.selectedCards').append(
+                        '<div class="col-3 card-container">' +
+                        '<img src=/Images/' + item['cardImage'] + '>' +
+                        '</div>' 
+                    )
+                }
+            }
+        })
+    })
+    </script>
+}

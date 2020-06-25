@@ -19,12 +19,17 @@ namespace CardGame.Controllers
             _cardService = cardService;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> GetCards()
         {
             var cards = await _cardService.GetCardSelection();
             var cardViewModel = new List<CardViewModel>();
 
-            foreach(var card in cards)
+            foreach (var card in cards)
             {
                 cardViewModel.Add(new CardViewModel
                 {
@@ -33,7 +38,7 @@ namespace CardGame.Controllers
                 });
             }
 
-            return View(cardViewModel);
+            return Json(cardViewModel);
         }
     }
 }
