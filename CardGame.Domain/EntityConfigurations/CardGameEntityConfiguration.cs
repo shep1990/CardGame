@@ -7,9 +7,9 @@ using System.Text;
 
 namespace CardGame.Domain.EntityConfigurations
 {
-    public class CardGameEntityConfiguration : IEntityTypeConfiguration<CardNameEntity>
+    public class CardGameEntityConfiguration : IEntityTypeConfiguration<CardEntity>
     {
-        public void Configure(EntityTypeBuilder<CardNameEntity> builder)
+        public void Configure(EntityTypeBuilder<CardEntity> builder)
         {
             builder.ToTable("CardGame");
 

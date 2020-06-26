@@ -1,8 +1,6 @@
 ﻿using CardGame.Domain.Data;
 using CardGame.Domain.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CardGame.Domain.Services
@@ -16,9 +14,9 @@ namespace CardGame.Domain.Services
             _cardRepository = cardRepository;
         }
 
-        public async Task<List<CardNameEntity>> GetCardSelection()
+        public async Task<List<CardEntity>> GetCardSelection(int cardAmount)
         {
-            return await _cardRepository.GetAsync();
+            return await _cardRepository.GetAsync(cardAmount);
         }
     }
 }

@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CardGame.Domain.Repositories
@@ -17,11 +16,13 @@ namespace CardGame.Domain.Repositories
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<List<CardNameEntity>> GetAsync()
+        public async Task<List<CardEntity>> GetAsync(int cardAmount)
         {
-            var cards = await _unitOfWork.Context.Set<CardNameEntity>().ToListAsync();
+            var cards = await _unitOfWork.Context.Set<CardEntity>().ToListAsync();
 
-            var cardSelection = cards.OrderBy(x => Guid.NewGuid()).Take(5).ToList();
+            var shuffledCards = cards.OrderBy(x => Guid.NewGuid());
+
+            var cardSelection = shuffledCards.Take(cardAmount).OrderByDescending(x => x.CardValue).ToList();
 
             return cardSelection;
         }

@@ -6,4 +6,3 @@ C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\Car
 C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.AssemblyInfo.cs
 C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.dll
 C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.pdb
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.csprojAssemblyReference.cache
