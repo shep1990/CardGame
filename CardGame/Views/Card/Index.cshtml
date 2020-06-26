@@ -1,0 +1,54 @@
+﻿
+<button class="drawCards">Draw Cards</button>
+<input class="cardAmount" type="text" placeholder="Enter custom selection"/>
+<div class="invalidAmount">Max value is 52</div>
+<p>Playing cards will be shown from highest to lowest values</p>
+
+<div class="row selectedCards"></div>
+<h3 class="error"></h3>
+
+@section Scripts {
+    <script>
+        $('.invalidAmount').hide();
+        $('.drawCards').on('click', function () {
+
+            if ($('.cardAmount').val() >= 52) {
+                $('.invalidAmount').show();
+                return false;
+            }
+            else {
+                $('.invalidAmount').hide();
+            }
+
+            var cardAmount;
+            if ($('.selectedCards').children().length > 0) {
+                $('.selectedCards').children().remove()
+            }
+            if ($('.cardAmount').val() != "") {
+                cardAmount = $('.cardAmount').val();
+            }
+
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action("GetCards", "Card")',
+                dataType: 'json',
+                data: {
+                    cardAmount: cardAmount
+                },
+                success: function (response) {
+                    for (var prop in response) {
+                        var item = response[prop];
+                        $('.selectedCards').append(
+                            '<div class="col-sm-12 col-md-4 col-lg-3 card-container">' +
+                            '<img src=/Images/' + item['cardImage'] + '>' +
+                            '</div>' 
+                        )
+                    }
+                },
+                error: function (response) {
+                    $('.error').text(response.responseText)
+                }
+            })
+        })
+    </script>
+}

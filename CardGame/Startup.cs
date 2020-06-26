@@ -5,6 +5,8 @@ using System.Reflection;
 using System.Threading.Tasks;
 using CardGame.Domain;
 using CardGame.Domain.Data;
+using CardGame.Domain.Repositories;
+using CardGame.Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,14 +15,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace CardGame
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             Configuration = configuration;
+            loggerFactory.AddLog4Net("log4net.config");
         }
 
         public IConfiguration Configuration { get; }
@@ -28,12 +32,9 @@ namespace CardGame
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            services.AddScoped<ICardService, CardService>();
+            services.AddScoped<ICardRepository, CardRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddDbContext<CardGameDbContext>(options =>
             {
@@ -73,7 +74,7 @@ namespace CardGame
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Card}/{action=Index}/{id?}");
             });
 
             ConfigureDb(app);

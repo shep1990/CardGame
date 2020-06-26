@@ -5,11 +5,69 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Images\Playing_card_club_10.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_2.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_3.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_4.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_5.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_6.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_7.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_8.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_9.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_A.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_J.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_K.svg" />
+    <None Include="wwwroot\Images\Playing_card_club_Q.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_10.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_2.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_3.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_4.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_5.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_6.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_7.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_8.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_9.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_A.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_J.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_K.svg" />
+    <None Include="wwwroot\Images\Playing_card_diamond_Q.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_10.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_2.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_3.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_4.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_5.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_6.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_7.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_8.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_9.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_A.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_J.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_K.svg" />
+    <None Include="wwwroot\Images\Playing_card_heart_Q.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_10.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_2.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_3.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_4.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_5.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_6.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_7.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_8.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_9.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_A.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_J.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_K.svg" />
+    <None Include="wwwroot\Images\Playing_card_spade_Q.svg" />
+  </ItemGroup>
+
 
   <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
 
