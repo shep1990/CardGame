@@ -42,12 +42,12 @@ namespace CardGame.Controllers
                     });
                 }
 
-                return Json(cardViewModel);
+                return Json(new { success = true, responseObj = cardViewModel });
             }
             catch(Exception ex)
             {
                 _logger.Error(String.Format("An error occurred: {0}", ex.Message));
-                return Json(new { responseText = "An error occurred" });
+                return Json(new { success = false, responseText = "An error occurred" });
             }
 
         }
