@@ -1,9 +1,0 @@
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\bin\Debug\netcoreapp2.2\CardGame.Domain.deps.json
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\bin\Debug\netcoreapp2.2\CardGame.Domain.dll
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\bin\Debug\netcoreapp2.2\CardGame.Domain.pdb
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.csproj.CoreCompileInputs.cache
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.AssemblyInfoInputs.cache
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.AssemblyInfo.cs
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.dll
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.pdb
-C:\Projects\PrivateProjects\CardGame\CardGame.Domain\obj\Debug\netcoreapp2.2\CardGame.Domain.csprojAssemblyReference.cache
